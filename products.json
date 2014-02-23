@@ -1,7 +1,7 @@
 {
-    "comment": "Fedora Atomic Controller Remix",
+    "comment": "Server Atomic Controller Fedora Remix ",
 
-    "osname": "fatomic",
+    "osname": "fedora-atomic-controller",
     "repo": "http://209.132.179.82/repo",
     
     "gpg_key": "843833DF",
