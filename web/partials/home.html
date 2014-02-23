@@ -1,49 +1,75 @@
 <article>
-  <div class="jumbotron">
-    <div class="container">
+  <div class="container">
+    <div class="jumbotron">
       <p>
-	The Fedora Atomic Initative is a new basis for operating system
-	development and deployment, using a combination
-	of <a href="http://live.gnome.org/Projects/OSTree">OSTree</a>,
-	the
-	venerable <a href="http://en.wikipedia.org/wiki/RPM_Package_Manager">RPM</a>,
-	and the Fedora package set.
+	The Server Atomic Controller Fedora Remix is a minimal
+	operating system, designed to
+	host <a href="http://docker.io">Docker</a> containers.  Using
+	technology from
+	the <a href="http://rpm-ostree.cloud.fedoraproject.org/">Fedora
+	Atomic Initiative</a>, it supports atomic upgrades.
       </p>
-      <p><img src="Important.png"> This initiative is experimental,
-      and not yet officially part of Fedora.</p>
       <p>
-	With <a href="https://github.com/cgwalters/rpm-ostree">rpm-ostree</a>,
-	multiple RPM package configurations can be assembled into an
-	OSTree repository on a build server, tested, and replicated to
-	client machines.  Clients using OSTree have <i>fully atomic</i>
-	upgrades.
+	You can run pre-built images on VirtualBox, QEMU/KVM, and
+	OpenStack.  Or set up your own build server, and include your
+	own custom RPM content such as a monitoring agent, or your
+	favorite editor.
       </p>
-    <p><a class="btn btn-primary btn-lg" role="button" href="#background">Learn more &raquo;</a></p>
+      <p>
+	<a class="btn btn-primary btn-lg" role="button" href="#download">Download &raquo;</a>
+      </p>
     </div>
   </div>
   
   <div class="container">
-   <div class="row">
-     <div class="col-md-4">
-       <h2>Installation</h2>
-       <p>
-	 Pre-provisioned virtual machines ready for use with QEMU/KVM
-	 are generated many times a day.  You also have the option to
-	 install one of these trees <i>inside your existing
-	 filesystem</i>, completely non-destructively.</p>
-       <p><a class="btn btn-default" href="#installation" role="button">Install &raquo;</a></p>
-     </div>
-     <div class="col-md-4">
-       <h2>Running your own repository</h2>
-       <p>
-	 All the tools here
-	 are <a href="https://www.gnu.org/philosophy/free-sw.html">Free
-	 Software</a> - you are not limited to merely consuming
-	 pre-constructed trees or packages.  You can use rpm-ostree to
-	 make your own custom trees derived from the Fedora package
-	 set, or include your own custom packages to create
-	 a <a href="https://fedoraproject.org/wiki/Remix">Remix</a>.</p>
-       <p><a class="btn btn-default" href="#running-custom" role="button">Run your own &raquo;</a></p>
-     </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">SELinux in enforcing mode</h2>
+        <p class="lead">Because rpm-ostree is an evolution of Fedora
+	  and RPM, Controller takes advantage of all of the work
+	  that's been put into things like Security-Enhanced Linux.
+	  This allows it to confine Docker containers with strong
+	  mandatory access control.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Smaller than RPM can normally go.</h2>
+        <p class="lead">With RPM, removing things like extra
+        documentation and translations has always been suboptimal.
+        OSTree allows Controller to use RPMs to build, but then strip
+        out these things to get a more minimal host operating system -
+        and updates only get <i>more efficient</i> as the system
+        becomes smaller.</p>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Easily create your own customized controllers</h2>
+        <p class="lead">
+	  You are not locked into our vision of what packages should
+	  go into a core controller operating system.  Use the
+	  rpm-ostree technology to create your own!  You can easily
+	  take our existing images, and add your own repository,
+	  configuring your servers to pull from it.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div>
+
    </div>
 </article>
